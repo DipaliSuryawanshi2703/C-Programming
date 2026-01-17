@@ -1,0 +1,55 @@
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+
+struct Stud
+{
+    int RNo;
+    char Name[40];
+    long long int MobNo;
+    float Per;
+};
+int main()
+{
+    int i = 0;
+    struct Stud Std[3] = {};
+
+    for(i =  1; i <=3; i++)
+    {
+        printf("\n Enter Student No %d  Details \n",i);
+
+        printf("\n Enter Student Roll Number = ");
+        scanf("%d",&Std[i].RNo);
+
+        fflush(stdin);
+
+        printf("\n Enter Student Name = ");
+        gets(Std[i].Name);
+
+        printf("\n Enter Mobile Number = ");
+        scanf("%lld",&Std[i].MobNo);
+
+        printf("\n Enter Percentage = ");
+        scanf("%f",&Std[i].Per);
+
+        printf("\n=================********==========\n");
+        fflush(stdin);
+    }
+    system("cls");
+    printf("\n Enter Any To See All Students Details \n");
+    getch();
+
+    for(i = 1; i<=3; i++)
+    {
+        printf("\n Roll Number   = %d",Std[i].RNo);
+        printf("\n Name          = %s",Std[i].Name);
+        printf("\n Mobile Number = %lld",Std[i].MobNo);
+        printf("\n Percentage    = %f",Std[i].Per);
+        printf("\n=================********==========\n");
+
+    }
+    getch();
+    return 0;
+
+}
+
